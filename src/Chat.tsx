@@ -7,7 +7,9 @@ interface Message {
     timestamp: string;
 }
 
-const socket = io("http://localhost:4000");
+ const socket = io("http://localhost:4000");
+// const socket = io(import.meta.env.VITE_SOCKET_SERVER_URL);
+
 
 const Chat = ({ username }: { username: string }) => {
     const [input, setInput] = useState("");
